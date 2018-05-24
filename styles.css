@@ -337,6 +337,20 @@ template {
   grid-row-gap: 1em;
 }
 
+.viewsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+.viewsGrid footer {
+  grid-column: 1/4;
+  grid-row: 5/6;
+}
+.viewsGrid header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
 .navGrid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -381,10 +395,30 @@ main #carouselBox img {
   max-width: 100%;
 }
 
-#trialcontainer {
-  grid-column: 1/3;
+.map {
+  background-color: brown;
   grid-row: 3/4;
-  display: inline-block;
+  grid-column: 1/2;
+}
+
+.featuredImage {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.featuredImage img {
+  max-width: 100%;
+}
+
+.destinationInfo {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  background-color: orange;
+}
+
+.gallery {
+  grid-row: 4/5;
+  grid-column: 1/4;
+  background-color: yellow;
 }
 
 .destination-left {
