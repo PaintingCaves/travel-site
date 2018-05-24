@@ -20,6 +20,27 @@
     grid-row: 1/2;
   }
 }
+
+.createGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  header{
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  footer{
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+  .inputArea{
+    grid-column: 2/3;
+    grid-row: 2/3;
+      input{
+        display: block;
+      }
+  }
+}
 .navGrid{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
