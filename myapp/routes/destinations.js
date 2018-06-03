@@ -51,12 +51,14 @@ router.post('/edit', function(req, res, next){
 router.post('/delete', function (req, res, next) {
     let destination_id = req.body.destinationId;
     console.log('this is deleting');
-
-    Destination.findByIdAndRemove(destination_id, function(err){
+    console.log(destination_id);
+    console.log(req.body);
+    
+    Destination.findByIdAndRemove(destination_id, function(err, destination){
         if (err) return handleError(err);
 
+        res.send('user deleted');
 
-        res.redirect('/')
     });
 
 })

@@ -22,6 +22,7 @@
                 </form>
                 <form action="/destinations/delete" method="POST">
                     <label for="Delete">Delete</label>
+                    <input type="hidden" name="destinationId" id="destinationId" value="<%= destination.id %>">
                     <input type="submit" name="Delete">
                 </form>
             </div>
