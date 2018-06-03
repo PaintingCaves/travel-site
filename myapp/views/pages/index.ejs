@@ -7,15 +7,7 @@
 </head>
 <body>
 <div class="grid">
-    <header class="navGrid">
-        <div><p>Timbukthree</p></div>
-        <nav><ul>
-            <li>home</li>
-            <li>about</li>
-            <li>contact</li>
-        </ul></nav>
-        <div><p>login</p></div>
-    </header>
+    <% include ../partials/header %>
     <main>
         <!-- Main image carousel -->
         <div id="carouselBox">
@@ -29,11 +21,20 @@
         </div>
         <div class="destination-text">
             <p>placeholder text 2</p>
+            <ul>
+                    <% for(destination of destinations){ %>
+                        <li><%= destination.title %></li>
+                        <li><%= destination.id %></li>
+                    <% } %>
+            </ul>
+
+
+
         </div>
     </div>
     <div class="destination-right">
         <div class="destination-text">
-           <p>placeholder text 1</p>
+           <p>placeholdertext1</p>
         </div>
         <div class="destination-image">
             <p>placeholder image 2</p>

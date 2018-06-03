@@ -7,25 +7,11 @@
 
 <body>
     <div class="createGrid">
-        <header class="navGrid">
-            <div>
-                <p>Timbukthree</p>
-            </div>
-            <nav>
-                <ul>
-                    <li>home</li>
-                    <li>about</li>
-                    <li>contact</li>
-                </ul>
-            </nav>
-            <div>
-                <p>login</p>
-            </div>
-        </header>
+        <%include ../partials/header %>
         <div class="inputArea">
-            <form action="">
+            <form action="/destinations" method="POST">
                 <label for=""title>Title</label>
-                <input type="text" name="title" id="" placeholder="title">
+                <input type="text" name="title" id="title" placeholder="title">
                 <label for="shortDescription" title>Short Description</label>                
                 <input type="text" name="shortDescription" id="" placeholder="Short Description">
                 <label for="longDescription" title>Long Description</label>

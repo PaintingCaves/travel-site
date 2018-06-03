@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="createGrid">
+        <%include ../partials/header %>
+            <div class="inputArea">
+                <form action="/destinations/edit" method="POST">
+                    <label for="title" title>Title</label>
+                    <input type="text" name="title" id="title" placeholder="title" value="<%= destination.title %>">
+                    <input type="hidden" name="destinationId" id="destinationId" value="<%= destination.id %>">
+                    <input type="submit">
+                </form>
+                <form action="">
+                    <label for="galleryImage">Gallery Image</label>
+                    <input type="file" name="galleryImage">
+                    <input type="submit">
+                </form>
+                <form action="/destinations/delete" method="POST">
+                    <label for="Delete">Delete</label>
+                    <input type="submit" name="Delete">
+                </form>
+            </div>
+            
+            <footer>
+                Footer
+            </footer>
+    </div>
+</body>
+
+</html>
