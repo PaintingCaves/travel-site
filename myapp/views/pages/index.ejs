@@ -18,26 +18,49 @@
     <div class="destination-left">
         <div class="destination-image">
             <p>placeholder image 1</p>
+            <p>
+                <%= destinations[0].id %>
+            </p>
         </div>
         <div class="destination-text">
             <p>placeholder text 2</p>
-            <ul>
-                    <% for(destination of destinations){ %>
-                        <li><%= destination.title %></li>
-                        <li><%= destination.id %></li>
-                    <% } %>
-            </ul>
+            <p>
+                <%= destinations[1].title %>
+            </p>
+            <a href="edit/<%= destinations[1].id %>">edit</a>
 
-
+        </div>
+        <div class="destination-image">
+            <p>placeholder image 3</p>
+            <p>
+                <%= destinations[2].id %>
+            </p>
 
         </div>
     </div>
     <div class="destination-right">
         <div class="destination-text">
-           <p>placeholdertext1</p>
+           <p>placeholder text 1</p>
+            <p>
+                <%= destinations[0].title %>
+            </p>
+            <a href="edit/<%= destinations[0].id %>">edit</a>
+
         </div>
         <div class="destination-image">
             <p>placeholder image 2</p>
+            <p>
+                <%= destinations[1].id %>
+            </p>
+
+        </div>
+        <div class="destination-text">
+            <p>placeholder text 3</p>
+            <p>
+                <%= destinations[2].title %>
+            </p>
+            <a href="edit/<%= destinations[2].id %>">edit</a>
+
         </div>
     </div>
 
