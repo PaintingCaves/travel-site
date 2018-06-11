@@ -15,6 +15,8 @@ router.post('/', function (req, res, next) {
     //save in the database
     var new_destination = new Destination({
         title: req.body.title,
+        shortDescription: req.body.shortDescription,
+        longDescription: req.body.longDescription
     }
     );
 

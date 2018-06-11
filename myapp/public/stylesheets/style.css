@@ -388,6 +388,13 @@ main {
   grid-column: 1/4;
   background-color: yellow; }
 
+#imageOverlay {
+  position: absolute;
+  z-index: 1000;
+  color: white;
+  top: 50%;
+  right: 50%; }
+
 .destination-left {
   grid-column: 1/2;
   grid-row: 3/4; }

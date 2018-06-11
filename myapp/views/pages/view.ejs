@@ -11,13 +11,14 @@
     <div class="viewsGrid">
         <% include ../partials/header %>
         <div class="featuredImage">
-            <img src="assets/images/aurora.jpg" alt="">
+            <p id="imageOverlay"><%= destination.title %></p>
+            <img src="/images/aurora.jpg" alt="">
         </div>
         <div class="map" id="map">
             <p>map</p>
         </div>
         <div class="destinationInfo">
-            <p>destination info</p>
+            <p><%= destination.title %></p>
         </div>
         <div class="gallery">
             <p>gallery</p>

@@ -13,7 +13,9 @@
                     <label for="title" title>Title</label>
                     <input type="text" name="title" id="title" placeholder="title" value="<%= destination.title %>">
                     <label for="shortDescription" title>Short Description</label>
-                    <input type="text" name="shortDescription" id="" placeholder="Short Description">   
+                    <input type="text" name="shortDescription" id="" placeholder="Short Description" value="<%= destination.shortDescription %>">
+                    <label for="longDescription" title>Long Description</label>
+                    <input type="text" name="longDescription" id="" placeholder="Long Description" value="<%= destination.longDescription %>"> 
                     <input type="hidden" name="destinationId" id="destinationId" value="<%= destination.id %>">
                     <input type="submit">
                 </form>

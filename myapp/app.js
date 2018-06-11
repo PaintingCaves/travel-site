@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
+
 
 mongoose.connect('mongodb://nicholas:snipey2018@ds219000.mlab.com:19000/ponderings')
 
@@ -20,6 +22,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(sassMiddleware({

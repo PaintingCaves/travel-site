@@ -37,8 +37,21 @@ router.get('/edit/:destination_id', function (req, res) {
 });
 
 //GET view page
-router.get('/view', function (req, res, next) {
-  res.render('./pages/view', { title: 'View' })
+router.get('/view/:destination_id', function (req, res) {
+
+  let destination_id = req.params.destination_id;
+  Destination.findById(destination_id, function (err, destination) {
+    if (err) {
+      res.send(err);
+    }
+    else {
+      res.render('./pages/view', {
+        title: 'View',
+        destination: destination
+      })
+    }
+  })
+
 });
 
 
