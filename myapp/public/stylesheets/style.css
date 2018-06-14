@@ -364,8 +364,10 @@ header nav {
 main {
   grid-column: 1/3;
   grid-row: 2/3; }
-  main #carouselBox img {
-    max-width: 100%; }
+  main #carouselBox {
+    text-align: center; }
+    main #carouselBox img {
+      max-width: 50%; }
 
 #map {
   grid-row: 3/4;
@@ -387,6 +389,8 @@ main {
   grid-row: 4/5;
   grid-column: 1/4;
   background-color: yellow; }
+  .gallery img {
+    max-width: 25vw; }
 
 #imageOverlay {
   position: absolute;
@@ -409,10 +413,11 @@ main {
     margin: 0; }
   .destination-left div, .destination-right div {
     height: 30vh; }
-  .destination-left .destination-text, .destination-right .destination-text {
-    background-color: red; }
   .destination-left .destination-image, .destination-right .destination-image {
-    background-color: blue; }
+    overflow: auto; }
+    .destination-left .destination-image img, .destination-right .destination-image img {
+      max-height: inherit;
+      max-width: 48%; }
 
 #newsletterSignup {
   grid-column: 1/3;

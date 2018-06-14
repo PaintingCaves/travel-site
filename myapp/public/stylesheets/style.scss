@@ -86,8 +86,9 @@ main{
   grid-row: 2/3;
 
   #carouselBox{
-    img{
-      max-width: 100%;  
+    text-align: center;
+    img {
+      max-width: 50%;
     }
   }
 }
@@ -112,6 +113,9 @@ main{
   grid-row: 4/5;
   grid-column: 1/4;
   background-color: yellow;
+    img{
+      max-width: 25vw;
+    }
 }
 
 #imageOverlay{
@@ -141,10 +145,13 @@ main{
     height: 30vh;
   }
   .destination-text{
-    background-color: red;
   }
   .destination-image{
-    background-color: blue;
+    overflow: auto;
+    img{
+      max-height: inherit;
+      max-width: 48%;
+    }
   }
 }
 

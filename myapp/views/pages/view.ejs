@@ -4,7 +4,8 @@
 <head>
 
     <% include ../partials/head %>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
 </head>
 
 <body>
@@ -12,35 +13,59 @@
         <% include ../partials/header %>
         <div class="featuredImage">
             <p id="imageOverlay"><%= destination.title %></p>
-            <img src="/images/aurora.jpg" alt="">
+            <img src="/images/<%= destination.featuredImage %>" alt="">
         </div>
         <div class="map" id="map">
-            <p>map</p>
         </div>
         <div class="destinationInfo">
-            <p><%= destination.title %></p>
+            <p><%= destination.longDescription %></p>
         </div>
-        <div class="gallery">
-            <p>gallery</p>
+        <div class="owl-carousel gallery">
+            <% for (galleryImage of destination.galleryImages) { %>
+                <div>
+                    <img class="" src="/images/<%= galleryImage %>" alt="">
+                </div>
+           <% } %>
         </div>
+        <input type="hidden" name="lat" id="lat" value="<%= destination.lat %>">
+        <input type="hidden" name="lng" id="lng" value="<%= destination.lng %>">
+
         <footer>
             Footer
         </footer>
     </div>
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
+    console.log('this is the script');
+    let lat = parseFloat(document.getElementById("lat").value);
+    let lng = parseFloat(document.getElementById("lng").value); 
+
+    console.log(lat);
+    console.log(lng);
+    
+       
     // Initialize and add the map
         function initMap() {
             // The location of Uluru
-            var uluru = { lat: -25.344, lng: 131.036 };
+            var place = { lat:lat, lng:lng };
             // The map, centered at Uluru
             var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 4, center: uluru });
+                document.getElementById('map'), { zoom: 4, center: place });
             // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({ position: uluru, map: map });
+            var marker = new google.maps.Marker({ position: place, map: map });
         }
+    $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                dots: false,
+            });
+        });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8NxcntctwEnWnk6f1Hwp7E__fic5QGn0&callback=initMap"
     type="text/javascript"></script>
-
 </html>

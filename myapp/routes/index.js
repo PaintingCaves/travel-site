@@ -6,7 +6,6 @@ var Destination = require('../models/Destination')
 router.get('/', function(req, res, next) {
   Destination.find({}, function(err, destinations){
     if (err) throw err;
-    console.log(destinations);
     
     res.render('./pages/index', { title: 'Home', destinations:destinations });
 

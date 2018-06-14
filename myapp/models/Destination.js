@@ -6,7 +6,10 @@ var destinationSchema = mongoose.Schema({
     title: String,
     featuredImage: String,
     shortDescription: String,
-    longDescription: String
+    longDescription: String,
+    lat: Number,
+    lng: Number,
+    galleryImages: Array
 
 });
 

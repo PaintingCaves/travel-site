@@ -9,20 +9,24 @@
     <div class="createGrid">
         <%include ../partials/header %>
         <div class="inputArea">
-            <form action="/destinations" method="POST">
+            <form action="/destinations" method="POST" enctype="multipart/form-data" id="uploadForm">
                 <label for=""title>Title</label>
                 <input type="text" name="title" id="title" placeholder="title">
                 <label for="shortDescription" title>Short Description</label>                
                 <input type="text" name="shortDescription" id="" placeholder="Short Description">
                 <label for="longDescription" title>Long Description</label>
                 <input type="text" name="longDescription" id="" placeholder="Long Description">
-                <input type="submit">
-            </form>
-            <form action="">
+                <label for="lat">Latitude</label>
+                <input type="text" name="lat" placeholder="123" id="">
+                <label for="lng">Longitude</label>
+                <input type="text" name="lng" placeholder="-456" id="">
                 <label for="featuredImage" title>Featured Image</label>
                 <input type="file" name="featuredImage" id="" placeholder="Featured Image">
-                <label for="galleryImage">Gallery Image</label>
-                <input type="file" name="galleryImage">
+                <label for="galleryImage1">Gallery Images</label>
+                <input type="file" name="galleryImage1">
+                <input type="file" name="galleryImage2">
+                <input type="file" name="galleryImage3">
+                <input type="file" name="galleryImage4">
                 <input type="submit">
             </form>
         </div>

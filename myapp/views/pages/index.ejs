@@ -17,58 +17,47 @@
     
     <div class="destination-left">
         <div class="destination-image">
-            <p>placeholder image 1</p>
-            <p>
-                <%= destinations[0].id %>
-            </p>
+            <img src="/images/<%= destinations[0].featuredImage %>" alt="">
         </div>
         <div class="destination-text">
-            <p>placeholder text 2</p>
             <p>
                 <%= destinations[1].title %>
+            </p>
+            <p>
+                <%= destinations[1].shortDescription %>
             </p>
             <a href="view/<%= destinations[1].id %>">view</a>
 
         </div>
         <div class="destination-image">
-            <p>placeholder image 3</p>
-            <p>
-                <%= destinations[2].id %>
-            </p>
+            <img src="/images/<%= destinations[2].featuredImage %>" alt="">
 
         </div>
     </div>
     <div class="destination-right">
         <div class="destination-text">
-           <p>placeholder text 1</p>
             <p>
                 <%= destinations[0].title %>
+            </p>
+            <p>
+                <%= destinations[0].shortDescription %>
             </p>
             <a href="view/<%= destinations[0].id %>">view</a>
 
         </div>
         <div class="destination-image">
-            <p>placeholder image 2</p>
-            <p>
-                <%= destinations[1].id %>
-            </p>
-
+            <img src="/images/<%= destinations[1].featuredImage %>" alt="">
         </div>
         <div class="destination-text">
-            <p>placeholder text 3</p>
             <p>
                 <%= destinations[2].title %>
+            </p>
+            <p>
+                <%= destinations[2].shortDescription %>
             </p>
             <a href="view/<%= destinations[2].id %>">view</a>
 
         </div>
-    </div>
-
-    <div id="newsletterSignup">
-            <form action="">
-                <input type="email">
-                <input type="submit">
-            </form>
     </div>
 
     <footer>
