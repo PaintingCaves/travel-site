@@ -2,6 +2,23 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 var Destination = require('../models/Destination');
+var Address = require('../models/Address')
+
+
+// SAVE email
+router.post('/address', function(req, res, next){
+    var new_address = new Address({
+        email : req.body.email
+    });
+
+    new_address.save(function (err) {
+        if (err) return handleError(err);
+
+
+        res.redirect('/')
+    });
+})
+
 
 
 /* SAVE Destinations. */
